@@ -28,16 +28,15 @@ const Project = (props) => {
             Tech Stack
           </p>
           <div className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
-            <div className="flex sm:flex-row">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-5">
               {props.stack.map((tech, index) => (
-                <div
-                  key={tech.id}
-                  index={index}
-                  className="text-dimWhite mr-5 text-[20px] hover:text-teal-200 tooltip"
-                >
-                  {React.createElement(tech.icon)}
-                  <span className="tooltiptext">{tech.name}</span>
-                </div>
+              <div
+              key={tech.id}
+              index={index}
+              className="text-dimWhite text-[20px] hover:text-teal-200"
+              >
+              {React.createElement(tech.icon)}
+              </div>
               ))}
             </div>
           </div>

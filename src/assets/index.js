@@ -8,6 +8,8 @@ import LL from "./LL.png";
 import bellLogo from "./bellLogo.png";
 import Automation from "./Automation.png";
 import SMS from "./SMS.webp";
+import Automation2 from "./Automation2.jpg";
+import bellReminder from "./bellReminder.webp";
 import quotes from "./quotes.svg";
 import robot from "./robot.png";
 import send from "./Send.svg";
@@ -97,6 +99,8 @@ export {
   bellLogo,
   Automation,
   SMS,
+  Automation2,
+  bellReminder,
   chargeswap,
   placeicon,
   recruitment,

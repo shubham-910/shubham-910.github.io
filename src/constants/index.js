@@ -4,6 +4,8 @@ import {
   logoColor,
   LL,
   SMS,
+  Automation2,
+  bellReminder,
   cluboard,
   cash_flow,
   gdsc,
@@ -709,7 +711,7 @@ export const projects = [
     title: "CI/CD pipeline automation",
     github: "https://github.com/shubham-910/Devops-Pipeline",
     link: "",
-    image: Automation,
+    image: Automation2,
     content: "A cloud-based DevOps pipeline setup that automates processes for streamlined development and deployment.",
     stack: [
       {
@@ -759,7 +761,7 @@ export const projects = [
     title: "Smart Reminder",
     github: "https://github.com/shubham-910/smart-reminder",
     link: "",
-    image: bellLogo,
+    image: bellReminder,
     content:
       "A cloud-hosted reminder system that keeps you on track with task reminders, so you never have to worry about losing track of time.",
     stack: [
