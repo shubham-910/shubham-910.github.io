@@ -172,7 +172,7 @@ export const educationList = [
   {
     id: "education-1",
     icon: dalhousieUniversity,
-    title: "Dalhousie University, Halifax, Canada",
+    title: "Dalhousie University | Halifax, Canada",
     degree: "Masters of applied computer science",
     duration: "Sep 2023 - Dec 2024",
     content1: "Major: Computer Science",
@@ -181,7 +181,7 @@ export const educationList = [
   {
     id: "education-2",
     icon: LJIET,
-    title: "LJ Institute of Engineering and Technology | GTU, India",
+    title: "LJ Institute of Engineering and Technology (GTU) | Ahmedabad, India",
     degree: "Bachelors in Computer Engineering",
     duration: "July 2018 - June 2022",
     content1: "Major: Computer Engineering",
