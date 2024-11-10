@@ -69,7 +69,7 @@ const ExperienceCard = (props) => {
           className="w-[52px] h-[52px] rounded-full z-[2]"
         /> */}
         <h4 className="font-poppins font-semibold text-[20px] text-gradient leading-[32px] ml-2">
-          {props.organisation}
+          <a href={props.link}> {props.organisation} </a>
         </h4>
       </div>
       <ol className="relative border-l border-gray-200 dark:border-gray-700 ml-6">
