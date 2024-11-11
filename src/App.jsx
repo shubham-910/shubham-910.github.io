@@ -14,6 +14,7 @@ import {
   BlogPosts,
   Loading,
   Achievements,
+  Certificate,
 } from "./components";
 
 const App = () => {
@@ -65,6 +66,7 @@ const App = () => {
               <div className={`${styles.boxWidth}`}>
                 <Projects />
                 <BlogPosts enabled={false} />
+                <Certificate />
                 <OpenSource />
                 {/* <ExtraCurricular /> */}
               </div>
