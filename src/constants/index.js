@@ -379,7 +379,7 @@ export const skills = [
       {
         id: "f-7",
         icon: SiAdobecreativecloud,
-        name: "AdobeCommerce",
+        name: "Adobe Commerce",
       },
       {
         id: "f-7",
