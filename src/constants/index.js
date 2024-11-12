@@ -584,14 +584,41 @@ export const experiences = [
             link: "",
         },
         {
-            text: "Search Optimization: Optimized North40.com search and data retrieval by 50% through Adobe Cloud migration and Redis Cache integration, decreasing database load by 40% and enhancing system scalability.",
+          text: "Search Optimization: Optimized search and data retrieval by 50% through Adobe Cloud migration and Redis Cache integration, decreasing database load by 40% and enhancing system scalability.",
             link: "",
         },
         {
             text: "System Reliability: Reduced downtime by 99% through security protocols (ACL, SSL, reCAPTCHA, monitoring) and achieved 99% test coverage with PHPUnit, ensuring high-quality assurance.",
             link: "",
         },
-        
+        {
+          text: "Worked on a Laravel-based eCommerce platform with Vue.js for dynamic front-end experiences, integrating Stripe for seamless payment processing. This resulted in a streamlined user checkout process, improved payment security, and reduced transaction times, boosting user satisfaction and conversion rates by 40%.",
+          link: "",
+        },
+        {
+          text:"Developed interactive and responsive UI components using Vue.js, enhancing user engagement on the Laravel eCommerce platform. Leveraged JavaScript ES6+ features to create reusable, modular code, reducing load times by 30% and improving maintainability.",
+          link: "",
+        },
+        {
+          text: "Created robust backend APIs in Laravel for payment processing, order management, and user authentication, employing Stripe integration to ensure secure transactions. This provided a frictionless experience for users and a scalable architecture for business growth.",
+          link: "",
+        },
+        {
+          text: "Developed scalable, maintainable code using OOP principles, prioritizing clean architecture and readability to ensure long-term code quality and ease of updates. Consistently followed SOLID principles to build modular, reusable components.",
+          link: "",
+        },
+        {
+          text: "Created custom modules and integrated new features, enhancing platform functionality based on client needs and user feedback. Successfully introduced features that improved user experience by 25% and met evolving business requirements",
+          link: "",
+        },
+        {
+          text:"Managed end-to-end site maintenance, proactively addressing bugs and optimizing performance. Took full ownership of project phases, from development to deployment, ensuring robust functionality and consistent uptime.",
+          linnk:"",
+        },
+        {
+          text: "Worked closely with cross-functional teams, including QA and product stakeholders, to align on feature requirements and testing strategies. Engaged in daily Scrum standups, sprint planning, and retrospectives to drive iterative improvements and agile project delivery.",
+          link: "",
+        },
         ],
       },
       {
@@ -606,7 +633,10 @@ export const experiences = [
             text: "Enhanced backend integration with PHP5 and front-end compatibility using HTML, CSS, JavaScript, Vue.js, React.js, improving communication efficiency by 90%.",
             link: "",
         },
-        
+        {
+          text: "Developed proficiency in Laravel + Vue.js by building a checkout system with secure and streamlined payment processing,enhancing hands-on experience with backend and frontend integration.",
+          link: "",
+        },
         ],
       },
     ],
