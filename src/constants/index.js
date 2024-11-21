@@ -6,6 +6,7 @@ import {
   SMS,
   Automation2,
   bellReminder,
+  Figma,
   cluboard,
   cash_flow,
   gdsc,
@@ -140,7 +141,7 @@ import {
 import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
 
 export const resumeLink = "https://drive.google.com/file/d/15pUTjoN18Mxo27qY_ex1RP7IdmEjI-Jj/view?usp=sharing";
-// export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
+// export const repoLink = "";
 
 export const callToAction = "https://www.linkedin.com/in/shubham-jethva-835b771b1/";
 
@@ -907,6 +908,27 @@ export const projects = [
         icon: SiTwilio,
         name: "Twilio API"
     },    
+    ],
+  },
+  {
+    id: "project-6",
+    title: "ShopByEcommerce - Figma",
+    github: "",
+    link: "https://www.figma.com/design/k15KMVWxcYBG7CxjPG2Y6Z/e-commerce-App?node-id=0-1&t=36uzkFxIIAtUlTMU-1",
+    image: Figma,
+    content:
+      "An eCommerce mobile app with a focus on intuitive UX and user-centric design principles.",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiFigma,
+        name: "Figma"
+      },
+      {
+        id: "icon-2",
+        icon: AiOutlineHighlight,
+        name: "UX Principles"
+      },
     ],
   },
   // {

@@ -57,6 +57,7 @@ import dennisivy from "./dennisivy.png";
 import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
+import Figma from "./Figma.png";
 
 export {
   quotes,
@@ -83,6 +84,7 @@ export {
   iris,
   ecell,
   genesis,
+  Figma,
   todo,
   graphql,
   portfolio,
