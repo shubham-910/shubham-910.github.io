@@ -58,7 +58,7 @@ import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
 import Figma from "./Figma.png";
-import GazeTrack from "GazeTrack.png";
+import GazeTrack from "./GazeTrack.png";
 
 export {
   quotes,
