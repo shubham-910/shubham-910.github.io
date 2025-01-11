@@ -7,7 +7,7 @@ import {
   Automation2,
   bellReminder,
   Figma,
-  gazetrack,
+  GazeTrack,
   cluboard,
   cash_flow,
   gdsc,
@@ -958,7 +958,7 @@ export const projects = [
     title: "GazeTrack",
     github: "https://github.com/shubham-910/gazeTrack",
     link: "",
-    image: gazetrack,
+    image: GazeTrack,
     content:
       "An Attention Bias Modification (ABM) web app with ML and LLM integration to help users to find and improve their pattern. ",
     stack: [

@@ -58,7 +58,7 @@ import manipal from "./manipal.png";
 import icon from "./icon.jpg";
 import ethforall from "./ethforall.png";
 import Figma from "./Figma.png";
-import gazetrack from "gazetrack.png";
+import GazeTrack from "GazeTrack.png";
 
 export {
   quotes,
@@ -86,7 +86,7 @@ export {
   ecell,
   genesis,
   Figma,
-  gazetrack,
+  GazeTrack,
   todo,
   graphql,
   portfolio,
