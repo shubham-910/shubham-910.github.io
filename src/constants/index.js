@@ -119,7 +119,10 @@ import {
   SiAmazonapigateway,
   SiAmazoniam,
   SiAmazoncloudwatch,
-  SiMlb
+  SiMlb,
+  SiScikitlearn,
+  SiNumpy,
+  SiPandas
 } from "react-icons/si";
 
 import {
@@ -979,8 +982,18 @@ export const projects = [
       },
       {
         id: "icon-4",
-        icon: SiMlb,
-        name: "Machine Learning"
+        icon: SiScikitlearn,
+        name: "Scikit Learn"
+      },
+      {
+        id: "icon-5",
+        icon: SiNumpy,
+        name: "Numpy"
+      },
+      {
+        id: "icon-6",
+        icon: SiPandas,
+        name: "Pandas"
       },
 
     ],
