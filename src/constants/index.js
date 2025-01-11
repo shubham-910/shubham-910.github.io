@@ -7,6 +7,7 @@ import {
   Automation2,
   bellReminder,
   Figma,
+  gazetrack,
   cluboard,
   cash_flow,
   gdsc,
@@ -117,7 +118,8 @@ import {
   SiAmazonsqs,
   SiAmazonapigateway,
   SiAmazoniam,
-  SiAmazoncloudwatch
+  SiAmazoncloudwatch,
+  SiMlb
 } from "react-icons/si";
 
 import {
@@ -593,11 +595,11 @@ export const experiences = [
             link: "",
         },
         {
-          text: "Worked on a Laravel-based eCommerce platform with Vue.js for dynamic front-end experiences, integrating Stripe for seamless payment processing. This resulted in a streamlined user checkout process, improved payment security, and reduced transaction times, boosting user satisfaction and conversion rates by 40%.",
+          text: "Worked on a Laravel-based eCommerce platform with Vue.js/React.js for dynamic front-end experiences, integrating Stripe for seamless payment processing. This resulted in a streamlined user checkout process, improved payment security, and reduced transaction times, boosting user satisfaction and conversion rates by 40%.",
           link: "",
         },
         {
-          text:"Developed interactive and responsive UI components using Vue.js, enhancing user engagement on the Laravel eCommerce platform. Leveraged JavaScript ES6+ features to create reusable, modular code, reducing load times by 30% and improving maintainability.",
+          text:"Developed interactive and responsive UI components using Vue.js/React.js, enhancing user engagement on the Laravel eCommerce platform. Leveraged JavaScript ES6+ features to create reusable, modular code, reducing load times by 30% and improving maintainability.",
           link: "",
         },
         {
@@ -656,6 +658,26 @@ export const experiences = [
           },
           {
             text: "Developed and maintained applications under mentorship, applying troubleshooting skills to ensure application stability and demonstrating quick learning and adaptability.",
+            link: ""
+          }
+        ],
+      },
+    ],
+  },
+  {
+    organisation: "CreArt Solutions OPC Pvt. Ltd.",
+    link: "https://www.creartsolutions.com/",
+    positions: [
+      {
+        title: "PHP Developer Intern",
+        duration: "May 2021 - june 2021",
+        content: [
+          {
+            text: "Developed PHP-based applications using Laravel, integrating MySQL/MariaDB for efficient data management under mentorship",
+            link: ""
+          },
+          {
+            text: "Implemented new concepts enhancing project efficiency by 30%.",
             link: ""
           }
         ],
@@ -929,6 +951,38 @@ export const projects = [
         icon: AiOutlineHighlight,
         name: "UX Principles"
       },
+    ],
+  },
+  {
+    id: "project-7",
+    title: "GazeTrack",
+    github: "https://github.com/shubham-910/gazeTrack",
+    link: "",
+    image: gazetrack,
+    content:
+      "An Attention Bias Modification (ABM) web app with ML and LLM integration to help users to find and improve their pattern. ",
+    stack: [
+      {
+        id: "icon-1",
+        icon: SiDjango,
+        name: "Django"
+      },
+      {
+        id: "icon-2",
+        icon: SiReact,
+        name: "React.js"
+      },
+      {
+        id: "icon-3",
+        icon: SiPostgresql,
+        name: "PostgreSQL"
+      },
+      {
+        id: "icon-4",
+        icon: SiMlb,
+        name: "Machine Learning"
+      },
+
     ],
   },
   // {
