@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { socialMedia, aboutMe } from "../constants";
 import { layout } from "../style";
-import { resumeLink } from "../constants";
+// import { resumeLink } from "../constants";
 
 const Footer = () => (
   <footer id="contactMe" className="bg-gray-900 sm:px-16 px-6">
@@ -34,9 +34,9 @@ const Footer = () => (
 
         <div className="grid grid-cols-2">
           {/* styles is a prop */}
-          <a href={resumeLink} target="_blank">
+          {/* <a href={resumeLink} target="_blank">
             <Button styles="mt-10 mr-3 inline-flex items-center justify-center" text="Resume" />
-          </a>
+          </a> */}
           {/* <a href={repoLink} target="_blank">
             <Button
               styles="mt-10 inline-flex items-center justify-center"
