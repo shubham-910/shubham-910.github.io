@@ -204,16 +204,21 @@ export const educationList = [
 export const certificateList = [
   {
     id: "certificate-1",
+    title: "AWS Certified Solutions Architect – Associate",
+    link: "https://www.credly.com/badges/d195aa31-e41b-4811-99b3-3cd3538c2025/public_url",
+  },
+  {
+    id: "certificate-2",
     title: " Data Analysis Certificate (LinkedIn, Microsoft)",
     link: "https://www.linkedin.com/learning/certificates/10143c2b3c436f9fb0db3695b02900b4b2d6200a879159fca63e50b3d15c809e?trk=share_certificate",
   },
   {
-    id: "certificate-2",
+    id: "certificate-3",
     title: "PowerBI Certificate",
     link: "https://drive.google.com/file/d/1bZWe8jSVWt1Y1aI__YpSARTzu98O-xBa/view",
   },
   {
-    id: "certificate-3",
+    id: "certificate-4",
     title: "Figma: UI/UX Design",
     link: "https://www.udemy.com/certificate/UC-b08bce7a-4697-45b5-b7b6-858400a40c87/",
   }
@@ -373,32 +378,32 @@ export const skills = [
         name: "GraphQL",
       },
       {
-        id: "f-7",
+        id: "f-8",
         icon: SiSpringboot,
         name: "SpringBoot",
       },
       {
-        id: "f-7",
+        id: "f-9",
         icon: SiNodedotjs,
         name: "NodeJs",
       },
       {
-        id: "f-7",
+        id: "f-10",
         icon: SiMagento,
         name: "Magento",
       },
       {
-        id: "f-7",
+        id: "f-11",
         icon: SiAdobecreativecloud,
         name: "Adobe Commerce",
       },
       {
-        id: "f-7",
+        id: "f-12",
         icon: SiLaravel,
         name: "Laravel",
       },
       {
-        id: "f-7",
+        id: "f-13",
         icon: SiVuedotjs,
         name: "Vue.js",
       },
@@ -418,77 +423,77 @@ export const skills = [
         name: "MySQL",
       },
       {
-        id: "t-2",
+        id: "t-3",
         icon: SiAmazondynamodb,
         name: "DynamoDB",
       },
       {
-        id: "t-2",
+        id: "t-4",
         icon: SiPostgresql,
         name: "PostgreSQL",
       },
       {
-        id: "t-3",
+        id: "t-5",
         icon: SiPostman,
         name: "Postman",
       },
       {
-        id: "t-4",
+        id: "t-6",
         icon: SiVisualstudiocode,
         name: "VS Code",
       },
       {
-        id: "t-5",
+        id: "t-7",
         icon: SiGit,
         name: "Git",
       },
       {
-        id: "t-6",
+        id: "t-9",
         icon: AiFillGithub,
         name: "GitHub",
       },
       {
-        id: "t-7",
+        id: "t-10",
         icon: AiOutlineGitlab,
         name: "Gitlab",
       },
       {
-        id: "t-8",
+        id: "t-11",
         icon: SiNetlify,
         name: "Netlify",
       },
       {
-        id: "t-9",
+        id: "t-12",
         icon: SiVite,
         name: "ViteJS",
       },
       {
-        id: "t-9",
+        id: "t-13",
         icon: SiBitbucket,
         name: "Bitbucket",
       },
       {
-        id: "t-10",
+        id: "t-14",
         icon: SiLinux,
         name: "Linux",
       },
       {
-        id: "t-11",
+        id: "t-15",
         icon: SiPowerbi,
         name: "Power BI",
       },
       {
-        id: "t-11",
+        id: "t-16",
         icon: SiJunit5,
         name: "JUnit",
       },
       {
-        id: "t-111",
+        id: "t-17",
         icon: SiSonarqube,
         name: "SonarQube",
       },
       {
-        id: "t-111",
+        id: "t-18",
         icon: SiFigma,
         name: "Figma",
       },
@@ -508,22 +513,22 @@ export const skills = [
         name: "Terraform",
       },
       {
-        id: "t-2",
+        id: "t-3",
         icon: SiJenkins,
         name: "Jenkins",
       },
       {
-        id: "t-3",
+        id: "t-4",
         icon: SiKubernetes,
         name: "Kubernetes",
       },
       {
-        id: "t-4",
+        id: "t-5",
         icon: SiDocker,
         name: "Docker",
       },
       {
-        id: "t-5",
+        id: "t-6",
         icon: SiAnsible,
         name: "Ansible",
       },
@@ -558,12 +563,12 @@ export const skills = [
             name: "Microservices"
         },
         {
-            id: "m-6",
+            id: "m-5",
             icon: FaLayerGroup, // For SOLID Principles
             name: "SOLID Principles"
         },
         {
-          id: "m-7",
+          id: "m-6",
           icon: AiOutlineHighlight,
           name: "UI/UX Principles",
         },
@@ -584,54 +589,54 @@ export const experiences = [
     positions: [
       {
         title: "Software Developer",
-        duration: "Jul 2022 - June 2023",
+        duration: "Jul 2022 - Dec 2023",
         content: [
           {
-            text: "Enhanced Checkout Experience: Increased checkout conversion rates by 90% using custom modules, KnockoutJS, and secure Stripe integration, resulting in higher user satisfaction.",
+            text: "Enhanced Checkout Experience: Increased checkout conversion rates by 90% using custom modules, KnockoutJS, and secure Stripe integration, significantly improving user satisfaction and revenue.",
             link: "",
-        },
-        {
-            text: "Cloud Migration: Upgraded code base from Magento Commerce to Adobe Commerce Cloud and configured GitLab for Adobe Magento Cloud, improving scalability and version control efficiency.",
+          },
+          {
+            text: "Cloud Migration: Successfully migrated the code base from Magento Commerce to Adobe Commerce Cloud, improving scalability, version control efficiency, and enabling secure GitLab integration for continuous deployment.",
             link: "",
-        },
-        {
-          text: "Search Optimization: Optimized search and data retrieval by 50% through Adobe Cloud migration and Redis Cache integration, decreasing database load by 40% and enhancing system scalability.",
+          },
+          {
+            text: "Search Optimization: Improved search and data retrieval performance by 50% through Adobe Cloud migration and Redis Cache integration, reducing database load by 40% and enhancing overall system scalability and speed.",
             link: "",
-        },
-        {
-            text: "System Reliability: Reduced downtime by 99% through security protocols (ACL, SSL, reCAPTCHA, monitoring) and achieved 99% test coverage with PHPUnit, ensuring high-quality assurance.",
+          },
+          {
+            text: "System Reliability: Achieved 99% uptime through advanced security protocols (ACL, SSL, reCAPTCHA, and continuous monitoring), and ensured 99% test coverage using PHPUnit, providing high system availability and quality assurance.",
             link: "",
-        },
-        {
-          text: "Worked on a Laravel-based eCommerce platform with Vue.js/React.js for dynamic front-end experiences, integrating Stripe for seamless payment processing. This resulted in a streamlined user checkout process, improved payment security, and reduced transaction times, boosting user satisfaction and conversion rates by 40%.",
-          link: "",
-        },
-        {
-          text:"Developed interactive and responsive UI components using Vue.js/React.js, enhancing user engagement on the Laravel eCommerce platform. Leveraged JavaScript ES6+ features to create reusable, modular code, reducing load times by 30% and improving maintainability.",
-          link: "",
-        },
-        {
-          text: "Created robust backend APIs in Laravel for payment processing, order management, and user authentication, employing Stripe integration to ensure secure transactions. This provided a frictionless experience for users and a scalable architecture for business growth.",
-          link: "",
-        },
-        {
-          text: "Developed scalable, maintainable code using OOP principles, prioritizing clean architecture and readability to ensure long-term code quality and ease of updates. Consistently followed SOLID principles to build modular, reusable components.",
-          link: "",
-        },
-        {
-          text: "Created custom modules and integrated new features, enhancing platform functionality based on client needs and user feedback. Successfully introduced features that improved user experience by 25% and met evolving business requirements",
-          link: "",
-        },
-        {
-          text:"Managed end-to-end site maintenance, proactively addressing bugs and optimizing performance. Took full ownership of project phases, from development to deployment, ensuring robust functionality and consistent uptime.",
-          linnk:"",
-        },
-        {
-          text: "Worked closely with cross-functional teams, including QA and product stakeholders, to align on feature requirements and testing strategies. Engaged in daily Scrum standups, sprint planning, and retrospectives to drive iterative improvements and agile project delivery.",
-          link: "",
-        },
+          },
+          {
+            text: "Vue.js & React.js Integration: Developed dynamic, responsive front-end components using Vue.js and React.js, integrating Stripe for seamless payment processing. This reduced transaction times by 30% and boosted user satisfaction and conversion rates by 40%.",
+            link: "",
+          },
+          {
+            text: "UI Component Development: Created highly interactive, reusable, and modular UI components with Vue.js/React.js, leveraging JavaScript ES6+ features, resulting in 30% faster page load times and improved code maintainability.",
+            link: "",
+          },
+          {
+            text: "API Development & Integration: Built robust backend APIs using Laravel for payment processing, order management, and user authentication, integrated Stripe for secure transactions, delivering a seamless user experience and scalable architecture.",
+            link: "",
+          },
+          {
+            text: "Clean Code & Maintainability: Utilized OOP principles and followed SOLID design patterns to build modular, reusable components, ensuring long-term code quality, easy updates, and scalability for future feature enhancements.",
+            link: "",
+          },
+          {
+            text: "Custom Feature Development: Designed and implemented custom features based on client requirements and user feedback, improving platform functionality by 25% and delivering tailored solutions that met business needs.",
+            link: "",
+          },
+          {
+            text: "End-to-End Site Maintenance: Took full ownership of the development lifecycle, proactively addressing bugs, optimizing performance, and ensuring consistent uptime with successful deployment management from development to production.",
+            link: "",
+          },
+          {
+            text: "Agile Collaboration: Worked closely with cross-functional teams (QA, product stakeholders) to define feature requirements, testing strategies, and deliverables. Participated in daily Scrum standups, sprint planning, and retrospectives to drive iterative improvements and efficient project delivery.",
+            link: "",
+          },
         ],
-      },
+      },      
       {
         title: "Software Developer Intern",
         duration: "Jan 2022 - June 2022",
@@ -1199,7 +1204,7 @@ export const socialMedia = [
 export const aboutMe = {
     name: "Shubham Jethva",
     githubUsername: 'shubham-910',
-    tagLine: "MACS @ Dalhousie University | Cloud & DevOps Enthusiast | Software Developer | Machine Learning Enthusiast",
+    tagLine: "Certified AWS Solution Architect | MACS @ Dalhousie University | Cloud & DevOps Enthusiast | Software Developer | Machine Learning Enthusiast",
     intro: ""
 }
 
