@@ -1,130 +1,123 @@
 import React from "react";
-import { experiences, skills } from "../constants";
-import { layout } from "../style";
+import { BsLink45Deg } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { experiences, skills } from "../constants";
+import SectionHeading from "./SectionHeading";
 
-export const SkillIcon = ({ icon, name }) => {
-  return (
-    <div className="flex flex-col">
-      <span className="text-white text-[30px] hover:text-teal-200">
-        {React.createElement(icon)}
-      </span>
-      <p className="font-poppins text-dimWhite text-[12px] mt-2">{name}</p>
+export const SkillIcon = ({ icon, name }) => (
+  <div className="tooltip">
+    <span className="skill-pill">
+      <span className="text-accent text-base">{React.createElement(icon)}</span>
+      <span>{name}</span>
+    </span>
+    <span className="tooltiptext">{name}</span>
+  </div>
+);
+
+const SkillCard = ({ title, items, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.4, delay: index * 0.08 }}
+    className="glass-card rounded-2xl p-6"
+  >
+    <h4 className="font-display font-semibold text-lg text-heading mb-4 flex items-center gap-2">
+      <span className="w-1 h-5 rounded-full bg-gradient-accent" />
+      {title}
+    </h4>
+    <div className="flex flex-wrap gap-2">
+      {items.map((item) => (
+        <SkillIcon key={item.id} {...item} />
+      ))}
     </div>
-  );
-};
+  </motion.div>
+);
 
-const SkillCard = (props) => {
-  return (
-    <motion.div
-      whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-      transition={{ duration: 1 }}
-      className="mt-4 mb-6 border-l border-gray-200 dark:border-gray-700 mx-4"
+const Content = ({ text, link }) => (
+  <li className="font-sans text-sm text-body leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.55em] before:w-1.5 before:h-1.5 before:rounded-full before:bg-accent/60">
+    {text}{" "}
+    {link && (
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        <BsLink45Deg size="1rem" className="inline text-accent hover:opacity-80" />
+      </a>
+    )}
+  </li>
+);
+
+const ExperienceCard = ({ organisation, link, positions, index }) => (
+  <motion.div
+    initial={{ opacity: 0, x: 20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.15 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    className="glass-card rounded-2xl p-6 md:p-8"
+  >
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-display font-semibold text-xl text-heading hover:text-accent transition-colors"
     >
-      <div className="relative w-3 h-3 bg-gray-200 rounded-full top-5 right-[6.2px] border dark:border-gray-900 dark:bg-gray-700"></div>
-      <div className="flex flex-row items-center mb-6 ml-6">
-        <h4 className="font-poppins font-semibold text-[20px] text-gradient leading-[32px]">
-          {props.title}
-        </h4>
-      </div>
-      <div className="grid grid-cols-3 gap-8 ml-8">
-        {props.items.map((item, index) => (
-          <SkillIcon key={item.id} index={index} {...item} />
-        ))}
-      </div>
-    </motion.div>
-  );
-};
+      {organisation}
+    </a>
 
-const Content = ({ text, link }) => {
-  return (
-    <div>
-      <p className="font-poppins font-normal text-[14px] text-dimWhite mt-4">
-        {text}{" "}
-        {link ? (
-          <a href={link} target="_blank">
-            <BsLink45Deg
-              size="1rem"
-              className="inline hover:text-teal-200"
-            ></BsLink45Deg>
-          </a>
-        ) : (
-          ""
-        )}
-      </p>
-    </div>
-  );
-};
+    <div className="mt-6 space-y-8 relative">
+      {positions.map((position, pIndex) => (
+        <div key={pIndex} className="relative pl-6">
+          {pIndex < positions.length - 1 && (
+            <div className="absolute left-[5px] top-6 bottom-0 w-px bg-border" />
+          )}
+          <div className="timeline-dot absolute left-0 top-1.5" />
+          <h3 className="font-semibold text-heading text-base">{position.title}</h3>
+          <time className="text-xs font-mono text-accent mt-0.5 block">{position.duration}</time>
 
-const ExperienceCard = (props) => {
-  return (
-    <motion.div
-    whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-    transition={{ duration: 1 }}
-    >
-      <div className="flex flex-row items-center mb-6">
-        {/* <img
-          src={props.logo}
-          alt={props.organisation}
-          className="w-[52px] h-[52px] rounded-full z-[2]"
-        /> */}
-        <h4 className="font-poppins font-semibold text-[20px] text-gradient leading-[32px] ml-2">
-          <a href={props.link} >{props.organisation} </a>
-        </h4>
-      </div>
-      <ol className="relative border-l border-gray-200 dark:border-gray-700 ml-6">
-        {props.positions.map((position, index) => (
-          <li
-            key={index}
-            className={`${
-              index === props.positions.length - 1 ? "mb-0" : "mb-4"
-            } ml-4`}
-          >
-            <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-            <h3 className="text-lg font-semibold text-gradient dark:text-white">
-              {position.title}
-            </h3>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              {position.duration}
-            </time>
-            {position.content.map((info, index) => (
-              <Content key={index} index={index} {...info} />
+          {position.stack?.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mt-3">
+              {position.stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-bg-secondary border border-border text-muted"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
+
+          <ul className="mt-3 space-y-2.5 list-none">
+            {position.content.map((info, cIndex) => (
+              <Content key={cIndex} {...info} />
             ))}
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"></p>
-          </li>
+          </ul>
+        </div>
+      ))}
+    </div>
+  </motion.div>
+);
+
+const SkillsAndExperience = () => (
+  <section id="skills" className="py-8 md:py-12">
+    <SectionHeading
+      label="01 — Expertise"
+      title="Skills & Experience"
+      subtitle="Technologies I work with and the impact I've delivered across roles."
+    />
+
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+      <div className="space-y-4">
+        {skills.map((skill, index) => (
+          <SkillCard key={skill.title} index={index} {...skill} />
         ))}
-      </ol>
-    </motion.div>
-  );
-};
-
-const SkillsAndExperience = () => {
-  return (
-    <section id="skills" className="mb-12">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
-        Skills & Experience
-      </h1>
-      <div
-        className={layout.section}
-        // whileInView={{ y: [-20, 0], opacity: [0, 1] }}
-        // transition={{ duration: 0.5 }}
-      >
-        {/* Skills */}
-        <motion.div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
-          {skills.map((skill, index) => (
-            <SkillCard key={index} index={index} {...skill} />
-          ))}
-        </motion.div>
-
-        {/* Experience */}
-        <motion.div className="flex flex-1 items-center justify-start flex-col">
-          {experiences.map((exp, index) => (
-            <ExperienceCard key={index} index={index} {...exp} />
-          ))}
-        </motion.div>
       </div>
-    </section>
-  );
-};
+
+      <div className="space-y-6">
+        {experiences.map((exp, index) => (
+          <ExperienceCard key={exp.organisation} index={index} {...exp} />
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default SkillsAndExperience;

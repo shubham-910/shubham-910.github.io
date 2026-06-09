@@ -1,17 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
-  mode: "jit",
+  darkMode: "class",
   theme: {
     extend: {
-      colors: {
-        primary: "#00040f",
-        secondary: "#00f6ff",
-        dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
-      },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        display: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+      },
+      animation: {
+        "fade-in": "fadeIn 0.5s ease forwards",
+        "slide-up": "slideUp 0.6s ease forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+        slideUp: {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
     },
     screens: {
@@ -20,7 +30,7 @@ module.exports = {
       sm: "768px",
       md: "1060px",
       lg: "1200px",
-      xl: "1700px",
+      xl: "1400px",
     },
   },
   plugins: [],

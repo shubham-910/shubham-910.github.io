@@ -1,90 +1,73 @@
-import styles, { layout } from "../style";
-import { educationList } from "../constants";
-import Lottie from "react-lottie-player";
-import animationData from "../lotties/quiz-mode-teal-dark.json";
 import { motion } from "framer-motion";
+import { educationList } from "../constants";
+import SectionHeading from "./SectionHeading";
+import { MonogramSeal, EDUCATION_THEMES, getMonogram } from "./VisualIdentity";
 
-// lottie config
-const defaultOptions = {
-  loop: true,
-  play: true,
-  animationData: animationData,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-
-const FeatureCard = ({
-  icon,
+const EducationCard = ({
   title,
   degree,
   duration,
   content1,
   content2,
-  index,
   link,
-}) => (
-  <div
-    className={`flex flex-row p-6 rounded-[20px]
-	${index === educationList.length - 1 ? "mb-0" : "mb-6"} feature-card`}
-  >
-    <div
-      className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}
-    >
-      <img src={icon} alt="icon" className="w-[80%] h-[80%] object-contain" />
-    </div>
-    <div className="flex-1 flex flex-col ml-4">
-      <h4 className="font-poppins font-semibold text-white text-[20px] leading-[30px] mb-1 text-gradient">
-        <a href={link} >{title}</a>
-      </h4>
-      <p className="font-poppins font-normal text-white text-[16px] leading-[30px] mb-1 ">
-        {degree}
-      </p>
-      <p className="font-poppins font-normal text-dimWhite text-[14px] leading-[30px] mb-1">
-        {duration}
-      </p>
-      <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">   
-      ● {content1}
-      </p>
-      {content2 && (
-        <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[30px] mb-1">     
-      ● {content2}
-        </p>
-      )}
-    </div>
-  </div>
-);
+  index,
+  monogram,
+}) => {
+  const theme = EDUCATION_THEMES[index % EDUCATION_THEMES.length];
+  const seal = monogram || getMonogram(title);
 
-const Education = () => {
   return (
-    <section id="education">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
-        Education
-      </h1>
-      <motion.div
-        className={layout.sectionReverse}
-        whileInView={{ x: [-60, 0], opacity: [0, 1] }}
-        transition={{ duration: 1 }}
-      >
-        <div className={layout.sectionImgReverse}>
-          <div className="w-[80%] h-[80%] relative z-[5]">
-            <Lottie {...defaultOptions} />
-          </div>
+    <motion.a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      className="glass-card rounded-2xl p-6 flex gap-5 group hover:-translate-y-1 transition-transform duration-300"
+    >
+      <MonogramSeal monogram={seal} gradient={theme.gradient} glow={theme.glow} />
 
-          {/* gradient start */}
-          <div className="absolute z-[3] -left-1/2 top-0 w-[50%] h-[50%] rounded-full white__gradient" />
-          <div className="absolute z-[0] w-[50%] h-[50%] -left-1/2 bottom-0 rounded-full pink__gradient" />
-          {/* gradient end */}
-        </div>
-
-        <div className={`${layout.sectionInfo} flex-col`}>
-          {educationList.map((feature, index) => (
-            <FeatureCard key={feature.id} index={index} {...feature} />
-          ))}
-        </div>
-      </motion.div>
-    </section>
+      <div className="flex-1 min-w-0">
+        <h4 className="font-display font-semibold text-heading text-lg group-hover:text-accent transition-colors">
+          {title}
+        </h4>
+        <p className="text-body text-sm mt-1">{degree}</p>
+        <span className="inline-block mt-2 px-3 py-0.5 rounded-full text-xs font-mono text-accent bg-accent/10 border border-accent/20">
+          {duration}
+        </span>
+        <ul className="mt-3 space-y-1">
+          <li className="text-sm text-body flex items-start gap-2">
+            <span className="text-accent mt-1 shrink-0">▸</span>
+            {content1}
+          </li>
+          {content2 && (
+            <li className="text-sm text-body flex items-start gap-2">
+              <span className="text-accent mt-1 shrink-0">▸</span>
+              {content2}
+            </li>
+          )}
+        </ul>
+      </div>
+    </motion.a>
   );
 };
+
+const Education = () => (
+  <section id="education" className="py-8 md:py-12">
+    <SectionHeading
+      label="02 — Background"
+      title="Education"
+      subtitle="Academic foundation in computer science and applied computing."
+    />
+
+    <div className="grid md:grid-cols-2 gap-6">
+      {educationList.map((item, index) => (
+        <EducationCard key={item.id} index={index} {...item} />
+      ))}
+    </div>
+  </section>
+);
 
 export default Education;

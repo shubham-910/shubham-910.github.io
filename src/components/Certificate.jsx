@@ -1,42 +1,46 @@
-import { certificateList } from "../constants";
 import { motion } from "framer-motion";
-import { layout } from "../style";
+import { HiOutlineDocumentCheck, HiArrowUpRight } from "react-icons/hi2";
+import { certificateList } from "../constants";
+import SectionHeading from "./SectionHeading";
 
-const FeatureCard = ({ title, link, index }) => (
-  <div
-    className={`flex flex-row p-6 rounded-[20px] ${
-      index === certificateList.length - 1 ? "mb-0" : "mb-6"
-    } feature-card`}
+const CertificateCard = ({ title, link, index }) => (
+  <motion.a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    initial={{ opacity: 0, y: 16 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.4, delay: index * 0.08 }}
+    className="glass-card rounded-2xl p-5 flex items-center gap-4 group hover:-translate-y-1 transition-all duration-300"
   >
-    <div className="flex-1 flex flex-col ml-4">
-      <h4 className="font-poppins font-semibold text-white text-[20px] leading-[30px] mb-1 text-gradient">
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          {title}
-        </a>
-      </h4>
+    <div className="shrink-0 w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center">
+      <HiOutlineDocumentCheck className="w-6 h-6 text-accent" />
     </div>
-  </div>
+    <div className="flex-1 min-w-0">
+      <h4 className="font-display font-semibold text-heading text-sm sm:text-base group-hover:text-accent transition-colors line-clamp-2">
+        {title}
+      </h4>
+      <span className="text-xs text-muted mt-1 block">View credential</span>
+    </div>
+    <HiArrowUpRight className="shrink-0 w-5 h-5 text-muted group-hover:text-accent transition-colors" />
+  </motion.a>
 );
 
-const Certificate = () => {
-  return (
-    <section id="certificateList" className="mt-10">
-      <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
-        Certificates
-      </h1>
-      <motion.div
-        className={layout.sectionReverse}
-        whileInView={{ x: [-60, 0], opacity: [0, 1] }}
-        transition={{ duration: 1 }}
-      >
-        <div className={`${layout.sectionInfo} flex-col`}>
-          {certificateList.map((certificate, index) => (
-            <FeatureCard key={certificate.id} index={index} {...certificate} />
-          ))}
-        </div>
-      </motion.div>
-    </section>
-  );
-};
+const Certificate = () => (
+  <section id="certificateList" className="py-8 md:py-12">
+    <SectionHeading
+      label="04 — Credentials"
+      title="Certificates"
+      subtitle="Professional certifications and completed learning programs."
+    />
+
+    <div className="grid sm:grid-cols-2 gap-4">
+      {certificateList.map((cert, index) => (
+        <CertificateCard key={cert.id} index={index} {...cert} />
+      ))}
+    </div>
+  </section>
+);
 
 export default Certificate;

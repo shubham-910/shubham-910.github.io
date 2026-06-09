@@ -1,78 +1,71 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
 import styles from "./style";
 import {
   Navbar,
   Hero,
   Education,
   SkillsAndExperience,
-  ExtraCurricular,
   Footer,
   OpenSource,
   Projects,
-  BlogPosts,
   Loading,
-  Achievements,
   Certificate,
 } from "./components";
+import BackgroundEffects from "./components/BackgroundEffects";
 
 const App = () => {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1200);
+    const timer = setTimeout(() => setIsLoading(false), 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    // A div to wrap the entire application
-    <div className="bg-primary w-full overflow-hidden">
-      <AnimatePresence>
+    <div className="relative min-h-screen w-full overflow-x-hidden">
+      <BackgroundEffects />
+
+      <AnimatePresence mode="wait">
         {isLoading ? (
           <Loading key="loading" />
         ) : (
-          <motion.section
+          <motion.div
             key="content"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.75, delay: 0.5 }}
+            transition={{ duration: 0.5 }}
           >
-            <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-              <div className={`${styles.boxWidth}`}>
-                <Navbar />
-              </div>
-            </div>
+            <Navbar />
 
-            <div className={`bg-primary ${styles.flexStart}`}>
-              <div className={`${styles.boxWidth}`}>
+            <main className={`${styles.paddingX} pt-[72px]`}>
+              <div className={styles.boxWidth}>
                 <Hero />
-              </div>
-            </div>
 
-            <div
-              className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}
-            >
-              <div className={`${styles.boxWidth}`}>
+                <div className="section-divider my-4" />
+
                 <SkillsAndExperience />
+
+                <div className="section-divider my-4" />
+
                 <Education />
-              </div>
-            </div>
-            {/* <Achievements /> */}
-            <div
-              className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}
-            >
-              <div className={`${styles.boxWidth}`}>
+
+                <div className="section-divider my-4" />
+
                 <Projects />
-                <BlogPosts enabled={false} />
+
+                <div className="section-divider my-4" />
+
                 <Certificate />
+
+                <div className="section-divider my-4" />
+
                 <OpenSource />
-                {/* <ExtraCurricular /> */}
               </div>
-            </div>
+            </main>
+
             <Footer />
-          </motion.section>
+          </motion.div>
         )}
       </AnimatePresence>
     </div>

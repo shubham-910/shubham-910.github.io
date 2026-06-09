@@ -1,45 +1,4 @@
 import {
-  dalhousieUniversity,
-  LJIET,
-  logoColor,
-  LL,
-  SMS,
-  Automation2,
-  bellReminder,
-  Figma,
-  GazeTrack,
-  cluboard,
-  cash_flow,
-  gdsc,
-  iris,
-  ecell,
-  genesis,
-  portfolio,
-  publiclab,
-  zulip,
-  cdc,
-  chargeswap,
-  placeicon,
-  recruitment,
-  huntly,
-  oracle,
-  comicify_ai,
-  greentrust,
-  averlon,
-  devfolio,
-  pba,
-  ethglobal,
-  polkadot,
-  lightspeed,
-  dennisivy,
-  manipal,
-  icon,
-  ethforall,
-  bellLogo,
-  Automation
-} from "../assets";
-
-import {
   AiFillGithub,
   AiFillInstagram,
   AiFillLinkedin,
@@ -181,7 +140,7 @@ export const navLinks = [
 export const educationList = [
   {
     id: "education-1",
-    icon: dalhousieUniversity,
+    monogram: "DU",
     title: "Dalhousie University, Halifax, Canada",
     degree: "Masters of applied computer science",
     duration: "Sep 2023 - Dec 2024",
@@ -191,12 +150,12 @@ export const educationList = [
   },
   {
     id: "education-2",
-    icon: LJIET,
+    monogram: "LJ",
     title: "LJ Institute of Engineering and Technology | GTU, India",
     degree: "Bachelors in Computer Engineering",
     duration: "July 2018 - June 2022",
     content1: "Major: Computer Engineering",
-    link:"https://ljku.edu.in/",
+    link: "https://ljku.edu.in/",
   },
 ];
 
@@ -584,95 +543,165 @@ export const skills = [
 // Add your current/past professional work experience here
 export const experiences = [
   {
-    organisation: "AdornCommerce LLP, India",
-    link: "https://www.adorncommerce.com/",
+    organisation: "Nova Scotia Health Authority",
+    link: "https://www.nshealth.ca/",
     positions: [
       {
-        title: "Software Developer",
-        duration: "Jul 2022 - Dec 2023",
+        title: "OPOR Support Consultant / Technical Analyst",
+        duration: "Feb 2026 – Present",
+        stack: ["Enterprise Systems", "SOP Documentation", "User Access Management", "Incident Resolution"],
         content: [
           {
-            text: "Enhanced Checkout Experience: Increased checkout conversion rates by 90% using custom modules, KnockoutJS, and secure Stripe integration, significantly improving user satisfaction and revenue.",
+            text: "Serve as the primary point of contact for front-line users and clients — triaging support requests, clarifying requirements, and delivering timely resolutions.",
             link: "",
           },
           {
-            text: "Cloud Migration: Successfully migrated the code base from Magento Commerce to Adobe Commerce Cloud, improving scalability, version control efficiency, and enabling secure GitLab integration for continuous deployment.",
+            text: "Author and maintain Standard Operating Procedures (SOPs) for recurring workflows, onboarding, and escalation paths.",
             link: "",
           },
           {
-            text: "Search Optimization: Improved search and data retrieval performance by 50% through Adobe Cloud migration and Redis Cache integration, reducing database load by 40% and enhancing overall system scalability and speed.",
+            text: "Resolve user access and permission issues across enterprise systems, ensuring compliance with security and provisioning policies.",
             link: "",
           },
           {
-            text: "System Reliability: Achieved 99% uptime through advanced security protocols (ACL, SSL, reCAPTCHA, and continuous monitoring), and ensured 99% test coverage using PHPUnit, providing high system availability and quality assurance.",
+            text: "Investigate system-level incidents, document root causes, and coordinate with technical teams to restore service and prevent recurrence.",
             link: "",
           },
-          {
-            text: "Vue.js & React.js Integration: Developed dynamic, responsive front-end components using Vue.js and React.js, integrating Stripe for seamless payment processing. This reduced transaction times by 30% and boosted user satisfaction and conversion rates by 40%.",
-            link: "",
-          },
-          {
-            text: "UI Component Development: Created highly interactive, reusable, and modular UI components with Vue.js/React.js, leveraging JavaScript ES6+ features, resulting in 30% faster page load times and improved code maintainability.",
-            link: "",
-          },
-          {
-            text: "API Development & Integration: Built robust backend APIs using Laravel for payment processing, order management, and user authentication, integrated Stripe for secure transactions, delivering a seamless user experience and scalable architecture.",
-            link: "",
-          },
-          {
-            text: "Clean Code & Maintainability: Utilized OOP principles and followed SOLID design patterns to build modular, reusable components, ensuring long-term code quality, easy updates, and scalability for future feature enhancements.",
-            link: "",
-          },
-          {
-            text: "Custom Feature Development: Designed and implemented custom features based on client requirements and user feedback, improving platform functionality by 25% and delivering tailored solutions that met business needs.",
-            link: "",
-          },
-          {
-            text: "End-to-End Site Maintenance: Took full ownership of the development lifecycle, proactively addressing bugs, optimizing performance, and ensuring consistent uptime with successful deployment management from development to production.",
-            link: "",
-          },
-          {
-            text: "Agile Collaboration: Worked closely with cross-functional teams (QA, product stakeholders) to define feature requirements, testing strategies, and deliverables. Participated in daily Scrum standups, sprint planning, and retrospectives to drive iterative improvements and efficient project delivery.",
-            link: "",
-          },
-        ],
-      },      
-      {
-        title: "Software Developer Intern",
-        duration: "Jan 2022 - June 2022",
-        content: [
-          {
-            text: "Built a Twilio-SMS module for Magento 2, achieving 99% delivery success for event-triggered SMS and email notifications.",
-            link: "",
-        },
-        {
-            text: "Enhanced backend integration with PHP5 and front-end compatibility using HTML, CSS, JavaScript, Vue.js, React.js, improving communication efficiency by 90%.",
-            link: "",
-        },
-        {
-          text: "Developed proficiency in Laravel + Vue.js by building a checkout system with secure and streamlined payment processing,enhancing hands-on experience with backend and frontend integration.",
-          link: "",
-        },
         ],
       },
     ],
   },
   {
-    organisation: "BrainyBeam Technologies PVT. LTD.",
+    organisation: "Brikli Inc.",
+    link: "https://www.brikli.com/",
+    positions: [
+      {
+        title: "Software Engineer",
+        duration: "Sep 2025 – Present",
+        stack: ["AWS", "Python", "FastAPI", "PostgreSQL", "React", "TypeScript", "Terraform", "SQS", "CI/CD"],
+        content: [
+          {
+            text: "Shipped type-safe FastAPI REST endpoints behind AWS API Gateway, reducing average API latency by 35%.",
+            link: "",
+          },
+          {
+            text: "Integrated multi-source webhooks and event-driven SQS queues to automate asynchronous data polling pipelines.",
+            link: "",
+          },
+          {
+            text: "Engineered API rate limiting on public endpoints to protect against payload surges and abusive traffic patterns.",
+            link: "",
+          },
+          {
+            text: "Provisioned reproducible cloud infrastructure with Terraform (IaC), cutting deployment setup time by 30%.",
+            link: "",
+          },
+          {
+            text: "Automated internal workflows with agentic AI tooling (Cursor, Claude Code), accelerating feature delivery and edge-case debugging by ~25%.",
+            link: "",
+          },
+          {
+            text: "Owned the product feature lifecycle from early user feedback through production deployment across multiple agile quarters; mentored junior engineers and led code reviews.",
+            link: "",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    organisation: "Persuasive Computing Lab, Dalhousie University",
+    link: "https://www.dal.ca/",
+    positions: [
+      {
+        title: "Software Engineer Research Intern",
+        duration: "Sep 2024 – Dec 2024",
+        stack: ["AWS", "CloudFormation", "ECS Fargate", "SNS/SQS", "IAM", "CloudWatch", "Serverless"],
+        content: [
+          {
+            text: "Deployed containerized microservices on AWS ECS Fargate, designing for 99.9% availability using the AWS Well-Architected Framework.",
+            link: "",
+          },
+          {
+            text: "Configured SNS/SQS event streams with least-privilege IAM policies to decouple asynchronous processing loops.",
+            link: "",
+          },
+          {
+            text: "Implemented Dead Letter Queues (DLQs) to isolate failed events and enable safe replay of pipeline edge cases.",
+            link: "",
+          },
+          {
+            text: "Modeled AWS environments as CloudFormation IaC templates, reducing resource initialization errors by 20%.",
+            link: "",
+          },
+          {
+            text: "Set up CloudWatch monitoring, dashboards, and alerting for production workload observability and incident response.",
+            link: "",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    organisation: "AdornCommerce LLP, India",
+    link: "https://www.adorncommerce.com/",
+    positions: [
+      {
+        title: "Software Developer",
+        duration: "Jul 2022 – Dec 2023",
+        stack: ["Adobe Commerce", "Laravel", "Vue.js", "React", "PHP", "MySQL", "Redis", "Stripe", "GitLab CI/CD"],
+        content: [
+          {
+            text: "Led migration from Magento Commerce to Adobe Commerce Cloud with GitLab CI/CD, improving deployment reliability and platform scalability.",
+            link: "",
+          },
+          {
+            text: "Built REST API architecture with Laravel for payments, order management, and authentication; integrated Stripe to increase checkout conversion by 90%.",
+            link: "",
+          },
+          {
+            text: "Developed reusable Vue.js and React micro-frontend components; optimized search and caching with Redis, cutting data retrieval time by 50%.",
+            link: "",
+          },
+          {
+            text: "Practiced TDD with PHPUnit (~99% coverage), SOLID design principles, and event-driven patterns in an Agile/Scrum environment.",
+            link: "",
+          },
+        ],
+      },
+      {
+        title: "Software Developer Intern",
+        duration: "Jan 2022 – Jun 2022",
+        stack: ["Magento 2", "Twilio", "Laravel", "Vue.js", "PHP", "MySQL"],
+        content: [
+          {
+            text: "Built a Twilio SMS module for Magento 2 with 99% delivery success for order and event-triggered notifications.",
+            link: "",
+          },
+          {
+            text: "Developed a Laravel + Vue.js checkout flow with secure payment processing, gaining full-stack integration experience.",
+            link: "",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    organisation: "BrainyBeam Technologies Pvt. Ltd.",
     link: "https://www.brainybeam.com/",
     positions: [
       {
         title: "Python Developer Intern",
-        duration: "May 2021 - june 2021",
+        duration: "May 2021 – Jun 2021",
+        stack: ["Python", "Django", "MySQL", "PostgreSQL"],
         content: [
           {
-            text: " Integrated MySQL and PostgreSQL with Django, achieving seamless data management and reinforcing foundational expertise in Python and Django frameworks.",
-            link: ""
+            text: "Integrated MySQL and PostgreSQL with Django ORM for reliable data management in production-style applications.",
+            link: "",
           },
           {
-            text: "Developed and maintained applications under mentorship, applying troubleshooting skills to ensure application stability and demonstrating quick learning and adaptability.",
-            link: ""
-          }
+            text: "Developed and maintained Django applications under mentorship, applying debugging and troubleshooting practices for stable releases.",
+            link: "",
+          },
         ],
       },
     ],
@@ -683,16 +712,17 @@ export const experiences = [
     positions: [
       {
         title: "PHP Developer Intern",
-        duration: "May 2021 - june 2021",
+        duration: "May 2021 – Jun 2021",
+        stack: ["PHP", "Laravel", "MySQL"],
         content: [
           {
-            text: "Developed PHP-based applications using Laravel, integrating MySQL/MariaDB for efficient data management under mentorship",
-            link: ""
+            text: "Built Laravel applications with MySQL/MariaDB for efficient CRUD operations and data modeling under senior developer guidance.",
+            link: "",
           },
           {
-            text: "Implemented new concepts enhancing project efficiency by 30%.",
-            link: ""
-          }
+            text: "Applied newly learned backend patterns to improve project delivery efficiency across assigned modules.",
+            link: "",
+          },
         ],
       },
     ],
@@ -704,9 +734,9 @@ export const projects = [
   {
     id: "project-1",
     title: "RentX",
+    category: "fullstack",
     github: "https://github.com/shubham-910/RentX",
     link: "",
-    image: logoColor,
     content:
       "eCommerce platform to rent and sell anything with fuson of scalable frontend and backend with React.js and Springboot.",
     stack: [
@@ -755,9 +785,9 @@ export const projects = [
   {
     id: "project-2",
     title: "Little-Light",
+    category: "fullstack",
     github: "https://github.com/shubham-910/little-light",
     link: "",
-    image: LL,
     content:
       "An online wellness platform connecting users with doctors for consultations, personalized treatment plans, and guided meditation for holistic health support.",
     stack: [
@@ -796,9 +826,9 @@ export const projects = [
   {
     id: "project-3",
     title: "CI/CD pipeline automation",
+    category: "devops",
     github: "https://github.com/shubham-910/Devops-Pipeline",
     link: "",
-    image: Automation2,
     content: "A cloud-based DevOps pipeline setup that automates processes for streamlined development and deployment.",
     stack: [
       {
@@ -846,9 +876,9 @@ export const projects = [
   {
     id: "project-4",
     title: "Smart Reminder",
+    category: "cloud",
     github: "https://github.com/shubham-910/smart-reminder",
     link: "",
-    image: bellReminder,
     content:
       "A cloud-hosted reminder system that keeps you on track with task reminders, so you never have to worry about losing track of time.",
     stack: [
@@ -902,9 +932,9 @@ export const projects = [
   {
     id: "project-5",
     title: "Twilio-SMS",
+    category: "backend",
     github: "https://github.com/shubham-910/twilio-sms",
     link: "",
-    image: SMS,
     content:
       "Custom module integrated with Twilio API to send SMS notifications for order placements, cancellations, and updates.",
     stack: [
@@ -948,9 +978,9 @@ export const projects = [
   {
     id: "project-6",
     title: "ShopByEcommerce - Figma",
+    category: "design",
     github: "",
     link: "https://www.figma.com/design/k15KMVWxcYBG7CxjPG2Y6Z/e-commerce-App?node-id=0-1&t=36uzkFxIIAtUlTMU-1",
-    image: Figma,
     content:
       "An eCommerce mobile app with a focus on intuitive UX and user-centric design principles.",
     stack: [
@@ -969,9 +999,9 @@ export const projects = [
   {
     id: "project-7",
     title: "GazeTrack",
+    category: "ml",
     github: "https://github.com/shubham-910/gazeTrack",
     link: "",
-    image: GazeTrack,
     content:
       "An Attention Bias Modification (ABM) web app with ML and LLM integration to help users to find and improve their pattern. ",
     stack: [

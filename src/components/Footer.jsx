@@ -1,65 +1,72 @@
 import React from "react";
-import Button from "./Button";
-import { socialMedia, aboutMe } from "../constants";
-import { layout } from "../style";
-// import { resumeLink } from "../constants";
+import { motion } from "framer-motion";
+import { HiArrowUpRight } from "react-icons/hi2";
+import { aboutMe, callToAction, socialMedia } from "../constants";
+import styles from "../style";
 
 const Footer = () => (
-  <footer id="contactMe" className="bg-gray-900 sm:px-16 px-6">
-    <div
-      className={`${layout.sectionReverse} xl:max-w-[1280px] w-full mx-auto gap-y-4 `}
-    >
-      <div className={` ${layout.sectionInfo}`}>
-        <h2 className="text-xl font-bold text-gradient font-poppins dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
-          {aboutMe.name}
-        </h2>
-        <p
-          className={`font-poppins font-normal text-dimWhite text-[16px] leading-[30.8px] max-w-[470px] mt-5`}
+  <footer id="contactMe" className="relative mt-16">
+    <div className="section-divider mb-0" />
+
+    <div className={`${styles.paddingX} py-16 md:py-20`}>
+      <div className={`${styles.boxWidth}`}>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="glass-card rounded-3xl p-8 md:p-12 text-center md:text-left"
         >
-        {aboutMe.tagLine}
-        </p>
-        <div className="flex flex-row mt-4">
-          {socialMedia.map((social, index) => (
-            <a
-              href={social.link}
-              target="_blank"
-              key={social.id}
-              index={index}
-              className="text-white mr-5 text-[25px] hover:text-teal-200"
-            >
-              {React.createElement(social.icon)}
-            </a>
-          ))}
-        </div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div className="max-w-xl">
+              <p className="font-mono text-xs uppercase tracking-widest text-accent mb-3">
+                Get in touch
+              </p>
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-heading">
+                Let's build something{" "}
+                <span className="text-gradient">great together</span>
+              </h2>
+              <p className="text-body mt-4 leading-relaxed">{aboutMe.tagLine}</p>
+            </div>
 
-        <div className="grid grid-cols-2">
-          {/* styles is a prop */}
-          {/* <a href={resumeLink} target="_blank">
-            <Button styles="mt-10 mr-3 inline-flex items-center justify-center" text="Resume" />
-          </a> */}
-          {/* <a href={repoLink} target="_blank">
-            <Button
-              styles="mt-10 inline-flex items-center justify-center"
-              text="Star"
-              icon={AiFillGithub}
-            />
-          </a> */}
-        </div>
-      </div>
+            <div className="flex flex-col items-center md:items-end gap-4">
+              <a
+                href={callToAction}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Connect on LinkedIn
+                <HiArrowUpRight className="h-4 w-4" />
+              </a>
+              <div className="flex gap-3">
+                {socialMedia.map((social) => (
+                  <a
+                    key={social.id}
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface text-heading hover:border-accent hover:text-accent transition-all duration-200"
+                    aria-label="Social link"
+                  >
+                    {React.createElement(social.icon, { className: "h-5 w-5" })}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
-      <div className="md:ml-auto mt-10 md:mt-0">
-        {/* <img
-          src={profilePic}
-          alt="Shubham Jethva"
-          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
-        /> */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-10 pt-8 border-t border-border">
+          <p className="font-display font-semibold text-heading text-sm">
+            {aboutMe.name}
+          </p>
+          <p className="text-xs text-muted font-mono">
+            © {new Date().getFullYear()} · Build with Care
+          </p>
+        </div>
       </div>
     </div>
-    {/* <div className="text-center font-poppins font-normal text-dimWhite text-xs sm:text-sm pb-4">
-      <p>
-        Made with 💙 by Shubham Jethva
-      </p>
-    </div> */}
   </footer>
 );
 
