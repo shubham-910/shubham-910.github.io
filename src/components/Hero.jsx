@@ -67,7 +67,7 @@ const Hero = () => {
 
           <div className="mt-4 h-8 sm:h-10">
             <p className="font-display text-xl sm:text-2xl md:text-3xl text-body">
-              I build{" "}
+              {" "}
               <motion.span
                 key={roleIndex}
                 initial={{ opacity: 0, y: 10 }}
